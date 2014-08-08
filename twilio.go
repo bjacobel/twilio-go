@@ -34,10 +34,10 @@ type TwilioRestClient struct {
 // ErrorResponse is the global struct that we are going to use to unmarshall
 // the errors returned by the API
 type ErrorResponse struct {
-	Code     int
+	Code     int `json:",string"`
 	Message  string
 	MoreInfo string `json:"more_info"`
-	Status   int
+	Status   int `json:",string"`
 }
 
 // NewErrorResponse will create an object type ErrorResponse giving the body
