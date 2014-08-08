@@ -25,7 +25,7 @@ type MessagesResponse struct {
 	DateCreated string `json:"date_created,string"`
 	DateSent    string `json:"date_sent,string"`
 	DateUpdated string `json:"date_updated,string"`
-	Direciton   string
+	Direction   string
 	From        string
 	Prices      string
 	Sid         string
