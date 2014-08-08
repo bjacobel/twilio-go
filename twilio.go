@@ -34,10 +34,10 @@ type TwilioRestClient struct {
 // ErrorResponse is the global struct that we are going to use to unmarshall
 // the errors returned by the API
 type ErrorResponse struct {
-	Code     int `json:",string"`
+	Code     int `json:",int"`
 	Message  string
-	MoreInfo string `json:"more_info"`
-	Status   int `json:",string"`
+	MoreInfo string `json:"more_info,string"`
+	Status   int `json:",int"`
 }
 
 // NewErrorResponse will create an object type ErrorResponse giving the body
@@ -47,7 +47,7 @@ func NewErrorResponse(body io.Reader) *ErrorResponse {
 	bodyContent, _ := ioutil.ReadAll(body)
 	log.Printf("%s", bodyContent)
 	if err := json.Unmarshal(bodyContent, &errorResponse); err != nil {
-		log.Panic(err)
+		log.Print(err)
 	}
 	log.Printf("%+v", errorResponse)
 	return &errorResponse
