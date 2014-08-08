@@ -52,7 +52,7 @@ func (m *Messages) Create(from string, to string, body string) (*MessagesRespons
 
 	response, err := m.client.post(apiURL, values)
 	if err != nil {
-		log.Panic(err) // I don't think that it's the best, but for now it's ok
+		log.Print(err)
 	}
 
 	if response.StatusCode == 200 {
