@@ -37,7 +37,7 @@ type ErrorResponse struct {
 	Code     int `json:",int"`
 	Message  string
 	MoreInfo string `json:"more_info,string"`
-	Status   string `json:",string"`
+	Status   string
 }
 
 // NewErrorResponse will create an object type ErrorResponse giving the body
