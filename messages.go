@@ -17,14 +17,14 @@ type Messages struct {
 
 // MessagesResponse is the struct where we will Unmarshal the API response
 type MessagesResponse struct {
-	AccountSid  string `json:"account_sid"`
-	APIVersion  string `json:"api_version"`
+	AccountSid  string `json:"account_sid,string"`
+	APIVersion  string `json:"api_version,string"`
 	Body        string
-	NumSegments string `json:"num_segments"`
-	NumMedia    string `json:"num_media"`
-	DateCreated string `json:"date_created"`
-	DateSent    string `json:"date_sent"`
-	DateUpdated string `json:"date_updated"`
+	NumSegments string `json:"num_segments,string"`
+	NumMedia    string `json:"num_media,string"`
+	DateCreated string `json:"date_created,string"`
+	DateSent    string `json:"date_sent,string"`
+	DateUpdated string `json:"date_updated,string"`
 	Direciton   string
 	From        string
 	Prices      string
